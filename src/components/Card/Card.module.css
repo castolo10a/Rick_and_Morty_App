@@ -1,0 +1,21 @@
+.contenedor{
+    color: aliceblue;
+    text-shadow: 2px 2px 3px red;
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 5px 10px 15px darkgray;
+}
+.contenedor:hover{
+    color: black;
+    background-color: aliceblue;
+}
+.boton {
+    background-color:transparent;
+    color:darkgray;
+    border-color:darkgray;
+}
+
+.boton:hover{
+    background-color: rgb(226, 21, 21);
+    color: darkgray;
+}
