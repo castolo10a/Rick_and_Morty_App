@@ -3,9 +3,5 @@
    background: url("../img_fondo/outerspace-58.gif") no-repeat center fixed;
    background-size: cover;
 }
-.card{
-   display: grid;
-   grid-template-columns: auto auto auto auto;
-   justify-content: center;
-}
+
 
