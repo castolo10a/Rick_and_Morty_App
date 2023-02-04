@@ -1,21 +1,28 @@
 .contenedor{
     color: aliceblue;
     text-shadow: 2px 2px 3px red;
-    background-color: black;
+    background-color:transparent;
     border-radius: 20px;
     box-shadow: 5px 10px 15px darkgray;
 }
 .contenedor:hover{
     color: black;
-    background-color: aliceblue;
+    background:  rgba(222, 237, 250, 0.445); 
 }
 .boton {
     background-color:transparent;
-    color:darkgray;
+    color:black;
     border-color:darkgray;
+    cursor: pointer;
 }
 
 .boton:hover{
     background-color: rgb(226, 21, 21);
     color: darkgray;
+    border-color: black;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

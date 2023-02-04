@@ -1,0 +1,26 @@
+.contenedor{
+    display: flex;
+    color: aliceblue;
+    text-shadow: 2px 2px 3px red;
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: 5px 10px 15px darkgrey;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.contenedor:hover{
+    color: black;
+    background:  rgba(222, 237, 250, 0.445); 
+}
+.contenedorUno{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    font-size: 20px;
+}
+.parrafo{
+    text-align: left;
+}
+
+

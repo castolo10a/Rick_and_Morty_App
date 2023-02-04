@@ -1,11 +1,14 @@
 .input{
-    width: 25%;
+    width: 65%;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 20px;
     border-radius: 20px;
     font-size: 15px;
+    border: 2px solid;
+    background-color: transparent;
+    color: aliceblue;
 }
 .boton{
     color: aliceblue;
@@ -17,8 +20,10 @@
     font-size: 15px;
     background-color: black;
     box-shadow: 5px 10px 15px darkgray;
+    cursor: pointer;
 }
 .boton:hover{
     color: black;
-    background-color: aliceblue;
+    background-color: rgba(222, 237, 250, 0.445);
 }
+ 

@@ -11,16 +11,16 @@ export default function SearchBar(props) {
 
    return (
       <div>
-         <input 
-            type='search'
-            className={styles.input}
-            onChange={handleChange}
-         />
          <button 
             onClick={() => props.onSearch(character)}
             className={styles.boton}>
                Agregar
          </button>
+         <input 
+            type='search'
+            className={styles.input}
+            onChange={handleChange}
+         />
       </div>
    );
 }

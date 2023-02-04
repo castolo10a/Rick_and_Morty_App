@@ -1,0 +1,43 @@
+.nav{
+   text-align: center;
+   border: 5px solid;
+   background: url("/img/outerspace-58.gif") no-repeat center fixed;
+   background-size: cover;
+   border-radius: 20px;
+   margin-bottom: 20px;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+.boton{
+   color: aliceblue;
+   padding: 7px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-right: 20px;
+   border-radius: 20px;
+   font-size: 15px;
+   background-color: black;
+   box-shadow: 5px 10px 15px darkgray;
+   cursor: pointer;
+}
+.boton:hover{
+   color: black;
+   background-color: rgba(222, 237, 250, 0.445);
+}
+.botonSalir{
+   color: aliceblue;
+   padding: 7px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-right: 20px;
+   border-radius: 20px;
+   font-size: 15px;
+   background-color: #e12631;
+   box-shadow: 5px 10px 15px darkgray;
+   cursor: pointer;
+}
+.botonSalir:hover{
+   color: black;
+   background-color: rgba(240, 62, 55, 0.445);
+}

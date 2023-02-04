@@ -1,0 +1,16 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+}
+.personaje{
+    color: aliceblue;
+    text-shadow: 2px 2px 3px red;
+    background-color:transparent;
+    border-radius: 20px;
+    box-shadow: 5px 10px 15px darkgray;
+}
+.personaje:hover{
+    color: black;
+    background-color:  rgba(222, 237, 250, 0.445);
+}
