@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./SearchBar.module.css"
 
 export default function SearchBar(props) {
-
+   console.log(props)
    const [character, setCharacter] = useState("");
 
    const handleChange = (event) => {
