@@ -31,8 +31,8 @@ const reducer = (state = initialState, action) => {
             return{
                 ...state,
                 myFavorites: action.payload === 'Ascendente'
-                ? state.allCharacters.sort((a,b) => a.id - b.id)
-                : state.allCharacters.sort((a,b) => b.id - a.id)
+                ? state.allCharacters.sort((a,b) => a.detailId - b.detailId)
+                : state.allCharacters.sort((a,b) => b.detailId - a.detailId)
             }
 
         default:
