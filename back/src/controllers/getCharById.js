@@ -20,4 +20,4 @@ const getCharById = async (req, res) => {
     }
 }
 
-module.exports = getCharById;
+module.exports = {getCharById};

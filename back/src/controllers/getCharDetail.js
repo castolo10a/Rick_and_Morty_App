@@ -14,7 +14,7 @@ const getCharDetail = async (req, res) => {
             image: data.image,
             gender: data.gender,
             status: data.status,
-            origin: data.origin
+            origin: data.origin.name
         }
         res.status(200).json(character)
     } 
@@ -23,4 +23,4 @@ const getCharDetail = async (req, res) => {
     }
 }
 
-module.exports = getCharDetail;
+module.exports = {getCharDetail};
