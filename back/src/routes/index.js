@@ -5,7 +5,7 @@ const { getCharDetail } = require('../controllers/getCharDetail');
 
 let favs = []; 
 
-router.get('/character/:id', getCharById);
+router.get('/onsearch/:id', getCharById);
 
 router.get('/detail/:detailId', getCharDetail);
 
