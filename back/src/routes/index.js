@@ -2,12 +2,23 @@ const express = require('express');
 const router = express.Router();
 const { getCharById } = require('../controllers/getCharById');
 const { getCharDetail } = require('../controllers/getCharDetail');
+const { getAllChars } = require('../controllers/getAllChars');
 
 let favs = []; 
+
+router.get('/allCharacters', async (req, res) => {
+    try {
+        const allCharacters = await getAllChars();
+        res.status(200).json(allCharacters);
+    } catch (error) {
+        res.status(404).json({error: error.message})
+    }
+});
 
 router.get('/onsearch/:id', getCharById);
 
 router.get('/detail/:detailId', getCharDetail);
+
 
 router.post('/fav', (req, res)=> {
     favs.push(req.body);
