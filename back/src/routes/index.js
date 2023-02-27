@@ -1,43 +1,66 @@
 const express = require('express');
 const router = express.Router();
+const { getAllFavs } = require('../controllers/getAllFavs');
 const { getCharById } = require('../controllers/getCharById');
-const { getCharDetail } = require('../controllers/getCharDetail');
+const { deleteChar } = require('../controllers/deleteChar');
 const { getAllChars } = require('../controllers/getAllChars');
+const postFavorite = require('../controllers/postFavorite')
 
-let favs = []; 
-
-router.get('/allCharacters', async (req, res) => {
+router.get('/allCharacters', async(req, res)=> {
     try {
         const allCharacters = await getAllChars();
+        //console.log(allCharacters);
         res.status(200).json(allCharacters);
-    } catch (error) {
+    } 
+    catch (error) {
         res.status(404).json({error: error.message})
+    }
+})
+
+
+
+// router.get('/detail/:detailId', deleteCharacter);
+
+router.get('/character/:id', getCharById);
+
+
+router.post("/fav", async (req, res)=>{
+    try {
+        const characterFav = await postFavorite(req.body);
+        if(characterFav.error) throw new Error(characterFav.error)
+
+        return res.status(200).json(characterFav);
+    } 
+    catch (error) {
+        return res.status(400).json({ error: error.masage })
     }
 });
 
-router.get('/onsearch/:id', getCharById);
 
-router.get('/detail/:detailId', getCharDetail);
-
-
-router.post('/fav', (req, res)=> {
-    favs.push(req.body);
-    res.status(200).send("Se guardó a favoritos el personaje");
+router.get('/fav', async (req, res) => {
+    try {
+        const allFavorites = await getAllFavs();
+        if(allFavorites.error) throw new Error(allFavorites.error);
+        return res.status(200).json(allFavorites);
+    } 
+    catch (error) {
+        return res.status(404).json({error:error.message});
+    }
 })
 
 
-router.get('/fav', (req, res) => {
-    res.status(200).json(favs);
+router.delete('/fav/:id', async(req, res) => {
+    try {
+        const { id } = req.params;
+        const deleteFav = await deleteChar(parseInt(id));
+        if(deleteFav.error) throw new Error(deleteFav.error);
+
+        return res.status(200).json(deleteFav);
+    } catch (error) {
+        return res.status(404).json({ error: error.message});
+    }
 })
 
 
-router.delete('/fav/:id', (req, res) => {
-    const { id } = req.params;
-
-    let characterFilter = favs.filter(char => char.id !== Number(id))
-    favs = characterFilter;
-
-    res.status(200).send("El personaje se elimino de favoritos");
-})
 
 module.exports = router;
